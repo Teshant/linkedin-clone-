@@ -1,0 +1,10 @@
+.main-container {
+  width: 1128px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 225px 1fr 300px;
+  gap: 24px;
+}
+
+
+

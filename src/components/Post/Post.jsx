@@ -1,0 +1,37 @@
+import "./Post.css";
+
+export default function Post({ post }) {
+  return (
+    <div className="post-card">
+
+      <div className="post-header">
+        <div className="post-avatar">
+          {post.name.charAt(0)}
+        </div>
+        <div className="post-user-info">
+          <h4>{post.name}</h4>
+          <p>{post.title} • {post.time}</p>
+        </div>
+      </div>
+
+      <div className="post-content">
+        {post.content}
+      </div>
+
+      <div className="post-actions">
+        <div>Like</div>
+        <div>Comment</div>
+        <div>Repost</div>
+        <div>Send</div>
+      </div>
+
+    </div>
+  );
+}
+
+
+
+
+
+
+
