@@ -8,7 +8,6 @@ export default function MainLayout() {
   return (
     <div>
       <Navbar />
-
       <div className="main-container">
         <SidebarLeft />
         <Feed />

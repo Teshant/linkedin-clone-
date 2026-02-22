@@ -1,9 +1,8 @@
 import "./Post.css";
 
-export default function Post({ post }) {
+export default function Post({ post, onLike, onDelete }) {
   return (
     <div className="post-card">
-
       <div className="post-header">
         <div className="post-avatar">
           {post.name.charAt(0)}
@@ -19,19 +18,24 @@ export default function Post({ post }) {
       </div>
 
       <div className="post-actions">
-        <div>Like</div>
+        <div
+          onClick={() => onLike(post.id)}
+          style={{ color: post.liked ? "#0a66c2" : "inherit" }}
+        >
+          Like ({post.likes})
+        </div>
+
         <div>Comment</div>
         <div>Repost</div>
         <div>Send</div>
-      </div>
 
+        <div
+          onClick={() => onDelete(post.id)}
+          style={{ color: "red" }}
+        >
+          Delete
+        </div>
+      </div>
     </div>
   );
 }
-
-
-
-
-
-
-
